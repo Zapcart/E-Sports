@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E Sports Lite - Free Fire & PUBG Tournaments India</title>
+  <meta name="description" content="Join daily Free Fire & PUBG tournaments with real cash prizes. Trusted by 50,000+ gamers. Instant payout & 100% refund policy." />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --gold: #d4af37;
+      --light-gold: #f7d774;
+      --dark: #0f0f0f;
+      --card: #1a1a1a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, #000, #d4af37, #000);
+      padding: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fff;
+      text-shadow: 0 0 20px #d4af37;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 52px;
+      color: var(--light-gold);
+      text-shadow: 0 0 20px rgba(212,175,55,0.8);
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, var(--gold), var(--light-gold));
+      color: #000;
+      padding: 16px 40px;
+      font-size: 20px;
+      font-weight: 800;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s;
+      box-shadow: 0 10px 20px rgba(212,175,55,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 30px rgba(212,175,55,0.6);
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .card {
+      background: var(--card);
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px rgba(212,175,55,0.2);
+      transition: 0.4s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(247,215,116,0.5);
+    }
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--light-gold);
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px rgba(247,215,116,0.5);
+    }
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    .game-card {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #1f1f1f, #111);
+      border-radius: 20px;
+      border: 2px solid transparent;
+      transition: 0.4s;
+    }
+    .game-card:hover {
+      border-color: var(--gold);
+      transform: scale(1.05);
+    }
+    .game-card i {
+      font-size: 60px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .price {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--light-gold);
+    }
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin: 50px 0;
+      font-size: 18px;
+    }
+    .badge {
+      text-align: center;
+    }
+    .badge i {
+      font-size: 40px;
+      color: var(--gold);
+    }
+    .form-section {
+      display: none;
+      background: linear-gradient(135deg, #111, #222);
+      border: 3px solid var(--gold);
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px 0;
+    }
+    input, select {
+      width: 100%;
+      padding: 16px;
+      margin: 12px 0;
+      background: #000;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 16px;
+    }
+    .qr-box {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .qr-box img {
+      width: 240px;
+      border: 5px solid var(--gold);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(212,175,55,0.6);
+    }
+    footer {
+      background: #000;
+      padding: 60px 20px 30px;
+      text-align: center;
+      border-top: 3px solid var(--gold);
+      margin-top: 50px;
+    }
+    .social-icons a {
+      color: var(--gold);
+      font-size: 28px;
+      margin: 0 15px;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 38px; }
+      header { font-size: 28px; }
+      .games-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>E SPORTS LITE</header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>PLAY • COMPETE • WIN BIG</h1>
+      <p>Join India's fastest growing esports platform. Daily Free Fire & PUBG tournaments with instant payouts!</p>
+      <button class="btn-primary" onclick="document.getElementById('tournaments').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-trophy"></i> View Today's Tournaments
+      </button>
+    </div>
+  </section>
+
+  <div class="container" id="tournaments">
+
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="badge"><i class="fas fa-users"></i><br>50,000+ Players</div>
+      <div class="badge"><i class="fas fa-rupee-sign"></i><br>₹10 Crore+ Paid</div>
+      <div class="badge"><i class="fas fa-shield-alt"></i><br>100% Safe & Trusted</div>
+      <div class="badge"><i class="fas fa-clock"></i><br>Instant Payout</div>
+    </div>
+
+    <div class="section">
+      <h2>Today's Tournaments</h2>
+      <div class="games-grid">
+        <div class="game-card" onclick="openForm('Free Fire', 'Solo')">
+          <i class="fas fa-fire"></i>
+          <h3>Free Fire Solo</h3>
+          <p class="price">Entry: ₹45 → Win: ₹1000</p>
+          <p><strong>8:00 PM Today</strong></p>
+          <span style="color:#0f0; font-weight:bold;">200/200 Slots Filled</span>
+        </div>
+        <div class="game-card" onclick="openForm('Free Fire', 'Squad')">
+          <i class="fas fa-users"></i>
+          <h3>Free Fire Squad</h3>
+          <p class="price">Entry: ₹200 → Win: ₹3000</p>
+          <p><strong>9:00 PM Today</strong></p>
+          <span style="color:#0f0;">LIVE NOW</span>
+        </div>
+        <div class="game-card" onclick="openForm('BGMI', 'Solo')">
+          <i class="fas fa-crosshairs"></i>
+          <h3>BGMI Solo</h3>
+          <p class="price">Entry: ₹50 → Win: ₹1200</p>
+          <p><strong>8:30 PM</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-section" id="form-section">
+      <h2 style="text-align:center; color:var(--light-gold); margin-bottom:20px;">
+        <i class="fas fa-gamepad"></i> Register Now
+      </h2>
+      <form onsubmit="return submitForm()">
+        <input type="text" id="selectedGame" readonly placeholder="Game">
+        <input type="text" id="selectedMode" readonly placeholder="Mode">
+        
+        <input type="text" id="playerName" placeholder="Your Real Name" required>
+        <input type="text" id="gameName" placeholder="In-Game Name (IGN)" required>
+        <input type="text" id="uid" placeholder="Your Game UID" required>
+
+        <div class="qr-box">
+          <p><strong>Scan QR & Pay Entry Fee</strong></p>
+          <img src="qrcode.jpg" alt="UPI QR Code">
+          <p style="margin-top:10px; color:#0f0;">After payment, click Submit → Auto join WhatsApp group</p>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <i class="fab fa-whatsapp"></i> Submit & Join WhatsApp Group
+        </button>
+      </form>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section card">
+      <h2>Frequently Asked Questions</h2>
+      <p><strong>→ Kaise join kare?</strong><br>Game select → Form fill → QR se payment → Auto WhatsApp group join</p>
+      <p><strong>→ Prize money kab milega?</strong><br>Match khatam hone ke 15-30 min me UPI pe</p>
+      <p><strong>→ Slot na mile to?</strong><br>100% refund within 5 minutes</p>
+      <p><strong>→ Safe hai?</strong><br>Haan, 50,000+ players roz khelte hain</p>
+    </div>
+  </div>
+
+  <footer>
+    <h3 style="color:var(--light-gold); font-size:28px; font-family:'Orbitron',sans-serif;">E SPORTS LITE</h3>
+    <p>India's Most Trusted Daily Esports Platform</p>
+    <div class="social-icons" style="margin:20px 0;">
+      <a href="https://wa.me/9234198025"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p><strong>Support:</strong> WhatsApp <a href="https://wa.me/9234198025" style="color:var(--gold);">9234198025</a></p>
+    <p style="margin-top:20px; color:#888; font-size:14px;">
+      ⚠️ This is skill-based esports tournament • No gambling • 100% Legal in India
+    </p>
+    <p>&copy; 2025 E Sports Lite. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function openForm(game, mode) {
+      document.getElementById('selectedGame').value = game + " - " + mode;
+      document.getElementById('selectedMode').value = mode;
+      document.getElementById('form-section').style.display = 'block';
+      document.getElementById('form-section').scrollIntoView({behavior:'smooth'});
+    }
+
+    function submitForm() {
+      const game = document.getElementById('selectedGame').value;
+      const mode = document.getElementById('selectedMode').value;
+      const player = document.getElementById('playerName').value;
+      const ign = document.getElementById('gameName').value;
+      const uid = document.getElementById('uid').value;
+
+      const message = `NEW REGISTRATION%0A%0A🎮 Game: ${game}%0A👤 Player: ${player}%0A🎯 IGN: ${ign}%0A🆔 UID: ${uid}%0A📱 Joined via E Sports Lite Website`;
+
+      window.open("https://wa.me/9234198025?text=" + message, "_blank");
+      alert("Payment done? You're registered! Check WhatsApp group in 2 minutes 🚀");
+      return false;
+    }
+  </script>
+</body>
+</html>
